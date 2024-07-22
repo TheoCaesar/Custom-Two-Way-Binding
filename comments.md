@@ -6,3 +6,7 @@ Two way binding is nothing more than the combination of input and output variabl
 * The output bit is slightly different from what we have been doing till now though. we need to use the same name of our input property, suffixed with 'Change'.
 * We'll then have a method emit whatever data we want implemented and then add the property unto the selector in it's parent.
 * This time around we dont add a new property but wrap the existing property for the input with brackets - so it gets the box of bananas look.
+
+## Model signals
+This offers us one simple way by replacing input and output variables with just one method.
+And this does not require any modification or stringent measures to data it receives from parents, be they signal or generic data types.

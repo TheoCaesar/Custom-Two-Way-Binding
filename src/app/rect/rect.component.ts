@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, model, output } from '@angular/core';
 
 @Component({
   selector: 'app-rect',
@@ -8,11 +8,11 @@ import { Component, input, output } from '@angular/core';
   styleUrl: './rect.component.css',
 })
 export class RectComponent {
-  // Todo: Implement custom two-way binding
-  size = input.required<{width:string, height:string}>()
-  sizeChange = output<{width:string, height: string}>();
+  // size = input.required<{width:string, height:string}>()
+  // sizeChange = output<{width:string, height: string}>();
+  size = model.required<{width:string, height:string}>()
   onReset() {
-    this.sizeChange.emit({
+    this.size.set({ //or .update()
       width: '100', height: '200'
     })
   }
