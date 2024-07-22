@@ -10,8 +10,10 @@ import { Component, input, output } from '@angular/core';
 export class RectComponent {
   // Todo: Implement custom two-way binding
   size = input.required<{width:string, height:string}>()
-
+  sizeChange = output<{width:string, height: string}>();
   onReset() {
-    // ...
+    this.sizeChange.emit({
+      width: '100', height: '200'
+    })
   }
 }
